@@ -61,7 +61,6 @@ ul {
     border-style: solid;
     border-color: white;
     border-radius: 5px;
-    width: min-content;
     list-style-type: none;
     padding-left: 10px;
 }
