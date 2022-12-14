@@ -25,9 +25,13 @@ function displayWeather() {
     }
 }
 
-function getLocation(name) {
+function getLocation(event, name) {
+    event.preventDefault();
+    console.log('my click works for preset')
     var name = $(this).text()
+    console.log(name)
     var locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=779e59dd91f874141af916bcc9211594`
+    console.log(locationUrl)
     $.ajax({
         url: locationUrl,
         method: 'GET',
@@ -55,9 +59,14 @@ function getWeather(lat, lon) {
 }
 
 $('.preset-city').on('click', getLocation)
-$('.search-button').on('submit', function(name) {
-    var name = $(this).sibling('#city').val()
-    var locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=779e59dd91f874141af916bcc9211594`
+
+$('.search-button').on('click', function(event) {
+    event.preventDefault();
+    var isThisTheForm = $(this).parent().children()[0].value;
+    console.log(isThisTheForm)
+    console.log('ssearch button clicked')
+    var locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${isThisTheForm}&appid=779e59dd91f874141af916bcc9211594`
+    console.log(locationUrl)
     $.ajax({
         url: locationUrl,
         method: 'GET',
