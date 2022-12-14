@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="./assets/style.css">
 <title>Weather Dashboard</title>
 </head>
-<body>
-    <header><h1>Weather Dashboard</h1</header>
-    <Main class="container-fluid">
+<body class="bg-success">
+    <header><h1>Weather Dashboard</h1></header>
+    <Main class="container-fluid bg-primary text-white">
         <div class="row">
             <div class="col container justify-content-left">
                 <h2>Search for a City</h2>
@@ -29,8 +29,13 @@
                     <button type="button" class="btn btn-dark btn-lg preset-city">New York</button>
                     </div>
             </div>
+            <div id="search-container">
+                <h3>Search History</h3>
+                <ul id="search-history"></ul>
+            </div>
         </div>
-        <div class="row">
+        <div class="row-12 justify-items-center" id="city-name"></div>
+        <div class="row bg-secondary text-white" id="forecast">
             <!-- <div class="col"> -->
                 <div class="col-2" id="day-1">
                     <div class="name"></div>
@@ -83,6 +88,7 @@
             <!-- </div> -->
         </div>
     </Main>
+    <footer>Made by Xavier</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
