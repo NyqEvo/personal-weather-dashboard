@@ -30,7 +30,7 @@ function getLocation(event, name) {
     console.log('my click works for preset')
     var name = $(this).text()
     console.log(name)
-    var locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=779e59dd91f874141af916bcc9211594`
+    var locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=779e59dd91f874141af916bcc9211594`
     console.log(locationUrl)
     $.ajax({
         url: locationUrl,
@@ -65,7 +65,7 @@ $('.search-button').on('click', function(event) {
     var isThisTheForm = $(this).parent().children()[0].value;
     console.log(isThisTheForm)
     console.log('ssearch button clicked')
-    var locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${isThisTheForm}&appid=779e59dd91f874141af916bcc9211594`
+    var locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${isThisTheForm}&appid=779e59dd91f874141af916bcc9211594`
     console.log(locationUrl)
     $.ajax({
         url: locationUrl,
